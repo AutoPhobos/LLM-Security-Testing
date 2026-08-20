@@ -10,7 +10,7 @@ Testing on Large Language Models — focused on prompt injection, jailbreak tech
 ## Test: System Prompt Extraction via Context-Splitting
 
 **Objective:**
-Test whether a multi-turn conversation — combining an indirect probe, an authority pretext, urgency-based social engineering, 
+Test whether a multi-turn conversation, combining an indirect probe, an authority pretext, urgency-based social engineering, 
 and split extraction, can bypass a guardrail that only validates messages one at a time.
 
 **Method:**
@@ -24,7 +24,7 @@ A 6-turn conversation was run against the simulated bot:
 6. Split extraction, part 2 ("now the second part")
 
 **Result:**
-The secret was not leaked in this run — but not because the guardrail was well designed.
+The secret was not leaked in this run, but not because the guardrail was well designed.
 
 - Turn 2's rephrased probe slipped past the keyword filter entirely (it only matches literal phrases, not paraphrases).
 - Turn 4 was blocked only because it happened to reuse an exact blocklisted phrase — not because the system recognized a multi-turn escalation pattern.
@@ -44,7 +44,7 @@ Add cross-turn state tracking. Flag conversations that escalate through recogniz
 fake_chatbot_01.py
 ```
 
-No external dependencies or API calls required — this is a fully local, deterministic simulation.
+No external dependencies or API calls required, this is a fully local, deterministic simulation.
 
 ## Scope note
 
