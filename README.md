@@ -41,7 +41,7 @@ Add cross-turn state tracking. Flag conversations that escalate through recogniz
 ## Running the test
 
 ```bash
-python3 fake_chatbot_01.py
+fake_chatbot_01.py
 ```
 
 No external dependencies or API calls required — this is a fully local, deterministic simulation.
